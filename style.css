@@ -1,6 +1,4 @@
-/* ==========================================================
-   RESET
-   ========================================================== */
+/* reset keseluruhan */
 * {
   margin: 0;
   padding: 0;
@@ -12,47 +10,44 @@ html {
 }
 
 
-/* ==========================================================
-   WARNA & VARIABEL (dipakai oleh Page 1, Page 2, Page 3)
-   ========================================================== */
+  /* warna yang di pakai */
 :root {
-
   /* Lebar maksimal konten 1200px, sisanya jadi margin kiri-kanan */
   --page-pad: max(16px, calc((100% - 1200px) / 2));
 
-  /* ===== BODY ===== */
+  /* body */
   --color-body-bg: #E8E9EA;
   --color-body-text: #476060;
 
-  /* ===== HEADER ===== */
+  /* header */
   --color-header-bg: #588F86;
   --color-header-text: #ffffff;
   --color-header-subtitle: #E8E9EA;
 
-  /* ===== NAVIGATION ===== */
+  /* nav */
   --color-nav-bg: #476060;
   --color-nav-text: #E8E9EA;
   --color-nav-hover: #D09670;
   --color-nav-active: #588F86;      /* menu halaman yang sedang dibuka */
   --color-hover-text: #ffffff;
 
-  /* ===== SECTION ===== */
+  /* section - left content */
   --color-section-title: #476060;
   --color-section-line: #D09670;
 
-  /* ===== PLANET CARD ===== */
+  /* planet card */
   --color-planet-card-bg: #C4D0D3;
   --color-planet-card-hover: #EEC5BA;
   --color-planet-text: #476060;
 
-  /* ===== SIDEBAR ===== */
+  /* sidebar - right */
   --color-sidebar-bg: #f9f9f9;
   --color-sidebar-border: #C4D0D3;
   --color-sidebar-title: #476060;
   --color-sidebar-link: #588F86;
   --color-sidebar-link-hover: #D09670;
 
-  /* ===== FOOTER ===== */
+  /* footer */
   --color-footer-bg: #476060;
   --color-footer-text: #ffffff;
   --color-footer-title: #D09670;
@@ -60,7 +55,7 @@ html {
   --color-footer-bottom-bg: #222;
   --color-footer-bottom-text: #ccc;
 
-  /* ===== PAGE 2 - PROFILE ===== */
+  /* page 2 - popup */
   --color-profile-overlay: rgba(0, 0, 0, 0.6);
   --color-profile-bg: #ffffff;
   --color-profile-title: #222222;
@@ -70,19 +65,15 @@ html {
   --color-profile-text: #333333;
   --color-profile-line: #e5e5e5;
 
-  /* ===== PAGE 3 - BLOG ===== */
+  /* page 3 - blog */
   --color-blog-bg: #f9f9f9;
   --color-blog-border: #C4D0D3;
   --color-blog-title: #476060;
   --color-blog-text: #555555;
   --color-blog-link: #588F86;
-  --color-blog-link-hover: #D09670;
 }
 
-
-/* ==========================================================
-   BODY
-   ========================================================== */
+/* ===== body ===== */
 body {
   font-family: Arial, sans-serif;
   background: var(--color-body-bg);
@@ -99,19 +90,14 @@ a {
   text-decoration: none;
 }
 
-
-/* ==========================================================
-   HEADER (Page 1, 2, 3) - 2 kolom
-   ========================================================== */
+/* ===== header untuk page 1, 2, 3 */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-
   background: var(--color-header-bg);
   color: var(--color-header-text);
-
   padding: 18px var(--page-pad);
 }
 
@@ -123,9 +109,8 @@ header {
 
 .header-left img {
   display: block;
-  width: 200px;
-  height: 100px;
-  border-radius: 25%;
+  width: 100%;
+  height: 110px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -151,9 +136,7 @@ header {
 }
 
 
-/* ==========================================================
-   NAVIGATION (Page 1, 2, 3) - 1 baris + dropdown Informasi
-   ========================================================== */
+  /* ===== nav untuk page 1,2, 3 */
 nav {
   position: relative;
   z-index: 50;
@@ -170,12 +153,10 @@ nav a,
 nav label {
   display: block;
   padding: 14px 18px;
-
   color: var(--color-nav-text);
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -191,7 +172,7 @@ nav a.active {
   color: var(--color-hover-text);
 }
 
-/* ----- Dropdown Informasi ----- */
+/* ===== Dropdown Informasi ===== */
 .dropdown {
   position: relative;
 }
@@ -216,15 +197,12 @@ nav a.active {
   left: 0;
   min-width: 100%;
   z-index: 100;
-
   list-style: none;
   background: var(--color-nav-bg);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px);
-
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
@@ -253,25 +231,20 @@ nav a.active {
 }
 
 
-/* ==========================================================
-   PAGE 1 - MAIN (2 kolom: kiri & kanan)
-   ========================================================== */
+  /* ===== page 1 - main */
 main {
   flex: 1 0 auto;
-
   display: flex;
   align-items: flex-start;
   gap: 20px;
-
   padding: 20px var(--page-pad);
 }
 
 
-/* ----- Kolom kiri: grid 3 kolom ----- */
+/* ===== kolom kiri: grid 3 kolom ===== */
 .content-left {
   flex: 3 1 0;
   min-width: 0;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
@@ -280,10 +253,8 @@ main {
 /* Judul section */
 .content-left > h2 {
   grid-column: 1 / -1;
-
   font-size: 20px;
   color: var(--color-section-title);
-
   padding-bottom: 6px;
   border-bottom: 2px solid var(--color-section-line);
 }
@@ -294,7 +265,6 @@ main {
   border-radius: 8px;
   overflow: hidden;
   text-align: left;
-
   transition: background 0.3s ease;
 }
 
@@ -307,7 +277,6 @@ main {
   width: 100%;
   height: 230px;
   object-fit: cover;
-
   opacity: 0.9;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
@@ -330,11 +299,10 @@ main {
 }
 
 
-/* ----- Kolom kanan: 3 box ke bawah ----- */
+/* ===== Kolom kanan: 3 box ke bawah ===== */
 .content-right {
   flex: 1 1 0;
   min-width: 250px;
-
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -350,7 +318,6 @@ main {
 .content-right h3 {
   font-size: 15px;
   color: var(--color-sidebar-title);
-
   padding-bottom: 6px;
   margin-bottom: 10px;
   border-bottom: 2px solid var(--color-section-line);
@@ -383,9 +350,7 @@ main {
 }
 
 
-/* ==========================================================
-   PAGE 1 - GALLERY (konten tersendiri di bawah main)
-   ========================================================== */
+  /* ===== page 1 - gallery */
 .gallery {
   padding: 0 var(--page-pad) 28px;
 }
@@ -393,7 +358,7 @@ main {
 .gallery > h2 {
   font-size: 20px;
   color: var(--color-section-title);
-
+  margin-top: 25px;
   padding-bottom: 6px;
   margin-bottom: 14px;
   border-bottom: 2px solid var(--color-section-line);
@@ -425,7 +390,6 @@ main {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-
   opacity: 0.9;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
@@ -436,16 +400,12 @@ main {
 }
 
 
-/* ==========================================================
-   FOOTER (Page 1, 3) - atas 3 kolom, bawah copyright
-   ========================================================== */
+  /* footer untuk page 1, 2, 3 */
 .footer-top {
   display: flex;
   gap: 30px;
-
   background: var(--color-footer-bg);
   color: var(--color-footer-text);
-
   padding: 28px var(--page-pad);
 }
 
@@ -466,12 +426,12 @@ main {
 }
 
 .footer-top a {
-  color: var(--color-footer-link);
+  color: var(--color-footer-text);
   transition: color 0.3s ease;
 }
 
 .footer-top a:hover {
-  color: #ffffff;
+  color: var(--color-footer-link);
   text-decoration: underline;
 }
 
@@ -486,16 +446,13 @@ main {
 .footer-bottom {
   background: var(--color-footer-bottom-bg);
   color: var(--color-footer-bottom-text);
-
   text-align: center;
   font-size: 12px;
   padding: 14px 16px;
 }
 
 
-/* ==========================================================
-   PAGE 2 - STUDENT PROFILE POPUP
-   ========================================================== */
+  /* ===== page 2 - student profile popup */
 .overlay {
   position: fixed;
   top: 0;
@@ -503,11 +460,9 @@ main {
   bottom: 0;
   left: 0;
   z-index: 200;
-
   display: flex;
   padding: 20px;
   overflow-y: auto;
-
   background: var(--color-profile-overlay);
 }
 
@@ -517,12 +472,10 @@ main {
   width: 460px;
   max-width: 100%;
   margin: auto;            /* di tengah layar, tetap aman saat layar pendek */
-
   background: var(--color-profile-bg);
   border-radius: 12px;
   padding: 30px 24px 24px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-
   animation: popup-in 0.4s ease;
 }
 
@@ -536,11 +489,9 @@ main {
   position: absolute;
   top: 8px;
   right: 16px;
-
   font-size: 30px;
   line-height: 1;
-  color: #888;
-
+  color: var(--color-blog-text);
   transition: color 0.3s ease;
 }
 
@@ -555,17 +506,15 @@ main {
   margin-bottom: 20px;
 }
 
-/* Foto profil: lingkaran + border */
+/* poto profil: lingkaran + border */
 .popup img {
   display: block;
   width: 110px;
   height: 110px;
   object-fit: cover;
   margin: 0 auto 22px;
-
   border-radius: 50%;
-  border: 4px solid var(--color-profile-border);
-
+  border: 3px solid var(--color-profile-border);
   transition: transform 0.4s ease;
 }
 
@@ -578,7 +527,6 @@ main {
   display: grid;
   grid-template-columns: 100px 1fr;
   align-items: center;
-
   min-height: 44px;
   border-bottom: 1px solid var(--color-profile-line);
   font-size: 14px;
@@ -596,10 +544,7 @@ main {
   padding: 12px;
 }
 
-
-/* ==========================================================
-   PAGE 3 - BLOG
-   ========================================================== */
+/* ===== page 3 - blog */
 .blog-content {
   flex: 1;
   min-width: 0;
@@ -608,7 +553,6 @@ main {
 .blog-content > h2 {
   font-size: 20px;
   color: var(--color-section-title);
-
   padding-bottom: 6px;
   margin-bottom: 16px;
   border-bottom: 2px solid var(--color-section-line);
@@ -635,6 +579,7 @@ main {
 
 .back-link {
   display: inline-block;
+  margin-top: 50px;
   color: var(--color-blog-link);
   font-size: 14px;
   transition: color 0.3s ease;
@@ -646,9 +591,7 @@ main {
 }
 
 
-/* ==========================================================
-   RESPONSIVE - TABLET (maks. 992px)
-   ========================================================== */
+/* ===== responsive - untuk tablet ===== */
 @media (max-width: 992px) {
 
   /* Page 1: kolom kiri & kanan jadi atas-bawah, kartu jadi 2 kolom */
@@ -675,9 +618,7 @@ main {
 }
 
 
-/* ==========================================================
-   RESPONSIVE - HP (maks. 600px)
-   ========================================================== */
+/* ===== responsive - untuk hp ===== */
 @media (max-width: 600px) {
 
   /* Header: 2 kolom jadi atas-bawah */
@@ -755,20 +696,5 @@ main {
   .popup .field {
     grid-template-columns: 80px 1fr;
     font-size: 13px;
-  }
-}
-
-
-/* ==========================================================
-   AKSESIBILITAS - matikan animasi jika pengguna memintanya
-   ========================================================== */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  * {
-    transition: none !important;
-    animation: none !important;
   }
 }
