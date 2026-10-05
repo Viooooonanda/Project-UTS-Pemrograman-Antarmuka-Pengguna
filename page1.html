@@ -23,14 +23,21 @@
       <li><a href="page1.html">Home</a></li>
       <li><a href="page2.html">Contact</a></li>
       <li><a href="page3.html">Blog</a></li>
-      <li><a href=" ">Google</a></li> <!-- PLANET DETAILS YANG ADA DI PAGE 1 -->
-      <li><a href=" ">Wikipedia</a></li> <!-- REFERENCE DI PAGE 1 -->
+      <li class="dropdown">
+        <input type="checkbox" id="menu-informasi" class="dropdown-toggle">
+        <label for="menu-informasi">Informasi &#9662;</label>
+        <ul class="dropdown-menu">
+          <li><a href="#planet-details">Planet Details</a></li> 
+          <li><a href="#references">Reference</a></li>  
+          <li><a href="#gallery">Gallery</a></li>       
+        </ul>
+      </li>
     </ul>
   </nav>
 
   <!-- Main Content -->
   <main>
-    <section class="content-left">
+    <section class="content-left" id="planet-details">
       <h2>Names and characteristics of planets</h2>
       <div class="col">
         <img src="image/Mercury.png">
@@ -80,6 +87,7 @@
         <p>Neptune is dark blue, often called the twin of Uranus. Its diameter is about 48,530 km, and its average temperature is -200°C.</p>
       </div>
     </section>
+
     <aside class="content-right">
       <div class="box">
         <h3>Quick Info on Planets</h3>
@@ -101,13 +109,13 @@
         <h3>Local Navigation</h3>
         <ul>
           <li><a href="page1.html">Home</a></li>
-          <li><a href="planet-details.html">Planet Details</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="#planet-details">Planet Details</a></li> 
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="page2.html">Contact</a></li>
         </ul>
       </div>
 
-      <div class="box">
+      <div class="box" id="references">
         <h3>External Sites / References</h3>
         <ul>
           <li><a href="https://solarsystem.nasa.gov">NASA Solar System Exploration</a></li>
@@ -116,6 +124,72 @@
       </div>
     </aside>
   </main>
+
+  <!-- Gallery  -->
+  <section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="image/galery1.jpg">
+      </figure>
+     
+      <figure class="gallery-item">
+        <img src="image/galery2.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery3.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery4.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery5.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery6.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery7.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery8.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery9.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery10.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery11.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery12.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery13.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery14.jpg">
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="image/galery15.jpg">
+      </figure>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -129,8 +203,8 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="page1.html">Home</a></li>
-          <li><a href="planet-details.html">Planet Details</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="#planet-details">Planet Details</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="page2.html">Contact</a></li>
         </ul>
       </div>
