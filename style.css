@@ -1,0 +1,201 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background: #E8E9EA; /* warna dasar terang */
+  color: #476060;      /* teks abu-abu kehijauan */
+  line-height: 1.5;
+}
+
+a { text-decoration: none; }
+
+/* ================= Header ================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #588F86; /* hijau earthy */
+  color: white;
+  padding: 18px 16px;
+}
+header img {
+  height: 40px;
+  width: 80px;
+  object-fit: cover;
+  display: block;
+}
+.header-right {
+  text-align: right;
+  max-width: 60%;
+}
+.header-right h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.header-right h3 {
+  font-size: 10px;
+  font-weight: normal;
+  color: #E8E9EA;
+}
+
+/* ================= Navigation ================= */
+nav {
+  background: #476060; /* hijau gelap */
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav ul li a {
+  display: block;
+  padding: 14px 16px;
+  color: #E8E9EA;
+  font-size: 11px;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  background: #D09670; /* oranye earthy */
+  color: #fff;
+  transition: 0.3s;
+}
+
+/* ================= Main ================= */
+main {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 18px 12px 20px;
+}
+
+/* Kolom kiri: grid 3 kolom */
+.content-left {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* Judul section (melebar 3 kolom + garis bawah) */
+.content-left > h2 {
+  grid-column: 1 / -1;
+  font-size: 14px;
+  color: #476060;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #D09670;
+}
+
+/* Kartu planet */
+.content-left .col {
+  background: #C4D0D3; /* abu-abu lembut */
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+}
+.content-left .col:hover {
+  background: #EEC5BA; /* pink lembut */
+  transition: 0.3s;
+}
+.content-left .col img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin: 0;
+}
+.content-left .col h2 {
+  font-size: 12px;
+  color: #476060;
+  padding: 14px 12px 6px;
+}
+.content-left .col p {
+  font-size: 10px;
+  color: #476060;
+  padding: 0 12px 14px;
+}
+
+/* ================= Sidebar ================= */
+.content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.content-right .box {
+  background: #f9f9f9;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #C4D0D3;
+}
+.content-right h3 {
+  font-size: 12px;
+  color: #476060;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #D09670;
+}
+.content-right p {
+  font-size: 10px;
+}
+.content-right ul {
+  list-style: none;
+}
+.content-right li {
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+.content-right a {
+  color: #588F86;
+  font-size: 10px;
+}
+.content-right a:hover {
+  color: #D09670;
+  text-decoration: underline;
+}
+
+/* ================= Footer ================= */
+footer {
+  margin-top: 20px;
+}
+.footer-top {
+  display: flex;
+  gap: 30px;
+  background: #476060;
+  color: #fff;
+  padding: 24px 16px;
+}
+.footer-top .col {
+  flex: 1;
+  text-align: left;
+}
+.footer-top h4 {
+  font-size: 12px;
+  margin-bottom: 12px;
+  color: #D09670; /* aksen oranye */
+}
+.footer-top p,
+.footer-top a {
+  font-size: 10px;
+}
+.footer-top a {
+  color: #EEC5BA;
+}
+.footer-top a:hover {
+  text-decoration: underline;
+}
+.footer-top ul {
+  list-style: none;
+}
+.footer-top li {
+  margin-bottom: 10px;
+}
+.footer-bottom {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  font-size: 10px;
+  padding: 12px;
+}
