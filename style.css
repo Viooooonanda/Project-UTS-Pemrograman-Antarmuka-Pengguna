@@ -43,8 +43,7 @@ html {
   /* sidebar - right */
   --color-sidebar-bg: #f9f9f9;
   --color-sidebar-border: #C4D0D3;
-  --color-sidebar-title: #476060;
-  --color-sidebar-link: #588F86;
+  --color-sidebar-titledanlink: #476060;
   --color-sidebar-link-hover: #D09670;
 
   /* footer */
@@ -317,7 +316,7 @@ main {
 
 .content-right h3 {
   font-size: 15px;
-  color: var(--color-sidebar-title);
+  color: var(--color-sidebar-titledanlink);
   padding-bottom: 6px;
   margin-bottom: 10px;
   border-bottom: 2px solid var(--color-section-line);
@@ -339,7 +338,7 @@ main {
 }
 
 .content-right a {
-  color: var(--color-sidebar-link);
+  color: var(--color-sidebar-titledanlink);
   font-size: 13px;
   transition: color 0.3s ease;
 }
